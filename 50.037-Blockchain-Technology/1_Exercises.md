@@ -40,22 +40,22 @@ function.
 
 ### Question 2
 
-Let us define a hash function `H(n,.)` that executes SHA-512 and outputs the `n`
-bits.
+Let us define a hash function `H(n, msg)` that computes SHA2-512 over `msg` and
+outputs the first `n` bits of the hash.
 
-- Find a collision of `H(8,.)`, `H(16,.)`, `H(24,.)`, `H(32,.)`, and
-`H(40,.)`.  Measure how long it takes to find a collision.
-- For `H(8, .)`, `H(16,.)`, `H(24,.)`, `H(32,.)` and `H(40,.)` find a preimage
-of the corresponding hashes: `"\x00"`, `"\x00"*2`, `"\x00"*3`, `"\x00"*4`, and
-`"\x00"*5`.  Measure how long it takes to find a preimage.
+- Find a collision of `H(8, msg)`, `H(16, msg)`, `H(24, msg)`, `H(32, msg)`, and
+  `H(40, msg)`.  Measure how long it takes to find a collision.
+- For `H(8, msg)`, `H(16, msg)`, `H(24, msg)`, `H(32, msg)` and `H(40, msg)`
+  find a preimage of the corresponding hashes: `b"\x00"`, `b"\x00"*2`, `b"\x00"*3`,
+  `b"\x00"*4`, and `b"\x00"*5`.  Measure how long it takes to find a preimage.
 - Compare times of finding a collision and a preimage.
 
 
 ### Question 3
 
 Generate key pairs for ECDSA and sign the string `"Blockchain Technology"`
-using these signature schemes with the generated keys. Then verify the obtained
-signatures.
+using this signature scheme with the generated key. Then verify the obtained
+signature.
 
 **Note:** throughout the rest of this course use NIST192p as the default curve
 for the ECDSA signature scheme (this one is used by default by the `ecdsa`
@@ -69,8 +69,8 @@ Design and implement a `Transaction` class that includes the following fields
 - sender (a public key of sender)
 - receiver (a public key of receiver)
 - amount (transaction amount, an integer >0)
-- signature (sender's signature protecting the transaction)
 - comment (arbitrary text, can be empty)
+- signature (sender's signature protecting the transaction)
 
 The class should provide the following interface
 
