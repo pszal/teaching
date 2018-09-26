@@ -6,9 +6,9 @@ implement a simple simulator with miners running Nakamoto consensus and making
 transactions:
 
 - Adjust the `TARGET` (global and static) parameter, such that on average new
-  blocks arrive every few (2-5) seconds.
+  blocks arrive every 2-5 seconds.
 - A miner who found a new block should be rewarded with 100 SUTDcoins.
-- Introduce random transactions, such that miners (with coins) can send
+- Introduce random transactions, such that miners (with coins) sends
   transactions to other miners.
 - Make sure that coins cannot be double-spent.
     - consider the `addr:balance` model and the UTXO model. What are pros and
