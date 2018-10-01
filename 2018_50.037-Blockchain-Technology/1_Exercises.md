@@ -18,7 +18,7 @@ following 6 weeks. In that way, we are going to have the following schedule:
 To approach this, we are going to develop Python v3.6 using the packages:
 base58, ecdsa, flask, hashlib, sqlite3, and matplotlib.
 
-**Note:** You don not have to configure your personal computer. In the
+**Note:** You do not have to configure your personal computer. In the
 [https://bit.ly/2Pjw2VE](https://bit.ly/2Pjw2VE), you can download a provided
 virtual machine image for VirtualBox hypervisor which is a Linux OS that has all
 packages and is configured already with necessary to perform the labs. However,
