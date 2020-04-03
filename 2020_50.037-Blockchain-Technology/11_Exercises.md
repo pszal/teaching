@@ -9,7 +9,7 @@ should:
 * Interact with the contract when required; for example, get winner status or
   trigger an arbitrage
 * Trigger interactions manually from a web GUI
-* Customers can interact through the web app using Metamask
+* Users can interact through the web app using Metamask
 
 **See an example below.**
 
