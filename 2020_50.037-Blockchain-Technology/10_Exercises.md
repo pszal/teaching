@@ -71,6 +71,14 @@ contract Fib {
 
 ### Cheatsheet: Minimum working example of contract deployment
 
+Preliminaries:
+```console
+(install Ganache)
+$ pip3 install py-solc web3
+$ python3 -m solc.install v0.4.25
+$ export PATH=$HOME/.py-solc/solc-v0.4.25/bin:$PATH
+```
+
 Example smart contract:
 ```js
 pragma solidity ^0.4.25;
@@ -123,7 +131,7 @@ tx_receipt = w3.eth.waitForTransactionReceipt(tx_hash)
 # Contract Object
 example = w3.eth.contract(address=tx_receipt.contractAddress, abi=contract_interface['abi'])
 
-print('Calling contracts functions')
+print('Calling contract functions')
 print('Contract address: ', example.address)
 print('obj.getOwner(): ', example.functions.getOwner().call())
 ```
